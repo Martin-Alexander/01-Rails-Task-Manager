@@ -1,0 +1,8 @@
+<p>ID: <%= @task.id %></p>
+<p>NAME: <%= @task.name%></p>
+<p>DONE: <%= @task.done ? "[X]" : "[ ]"%></p>
+
+<%= link_to("DELETE", task_path(@task.id), method: :delete) %>
+<%= link_to("UPDATE", edit_task_path(@task.id)) %>
+<%= link_to("BACK TO LIST", tasks_path) %>
+<%= link_to("MARK AS DONE", task_path(@task, task: {done: true}), method: :patch) %>

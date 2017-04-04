@@ -1,0 +1,7 @@
+<h1>LIST OF TASKS</h1>
+
+<% @all_tasks.each do |i| %>
+  <p><%= link_to("#{i.id} - #{i.name} - #{i.done ? '[X]' : '[ ]'}", task_path(i.id)) %></p>
+<% end %>
+
+<%= link_to("CREATE NEW", new_task_path) %>
